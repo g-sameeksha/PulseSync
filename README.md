@@ -33,6 +33,8 @@ Welcome to **PulseSync**, the ultimate destination for mindfulness and music!
    ```bash
    export SPOTIPY_CLIENT_ID='your_client_id'
    export SPOTIPY_CLIENT_SECRET='your_client_secret'
+   export SPOTIPY_REDIRECT_URI="https://open.spotify.com/playlist/37i9dQZEVXbMWDif5SCBJq"
+
    ```
 6. Run the application:
    ```bash
