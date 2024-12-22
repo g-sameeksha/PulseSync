@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block title %}PulseSync-Relaxio{% endblock %}
+{% block style %}
+<link rel="stylesheet" href="{{ url_for('static', filename='meditate.css') }}">
+
+{% endblock %}
+{% block content %}
+<audio src="{{ url_for('static', filename='scott-buckley-permafrost(chosic.com).mp3') }}"  id ="bgMusic"> </audio>
+<div class="breathing-container">
+    <div class="instructions">
+        <h2 id="breathing-text">Calm down Yourself</h2>
+        <h5>Just by Practicing Breathing Exercise</h5>
+    </div>
+    <div class="circle"></div>
+    
+    <div class="controls">
+        <button id="start-button">Start</button>
+        <button id="stop-button" disabled>Stop</button>
+    </div>
+</div>
+{% endblock %}
+
+

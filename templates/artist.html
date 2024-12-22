@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="artist-page">
+    <div class="artist-header">
+        <h2>{{ artist.name }}</h2>
+        <p>Followers: {{ artist.followers.total }}</p>
+        <a href="{{ artist.external_urls.spotify }}" target="_blank">View Artist on Spotify</a>
+    </div>
+
+    <ul class="artist-songs-list">
+        {% for track in top_tracks %}
+        <li class="artist-song-item">
+            <p class="song-name">{{ track.name }}</p>  <p><a href="{{ track.external_urls.spotify }}" target="_blank">Listen on Spotify</a></p>
+        </li>
+        {% endfor %}
+    </ul>
+
+    <div class="back-home">
+        <a href="/" class="search-button">Back to Home</a>
+    </div>
+</div>
+{% endblock %}

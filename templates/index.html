@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h1>Spotify Search</h1>
+    <form method="POST">
+        <div class="search-bar">
+            <input type="text" name="query" placeholder="Enter song or artist name" required>
+            <select name="search_type" class="search-select">
+                <option value="track">Song</option>
+                <option value="artist">Artist</option>
+            </select>
+            <button type="submit" class="search-button">Search</button>
+        </div>
+    </form>
+
+    
+
+
+    {% if search_type == 'track' %}
+    {% if songs|length != 0 %}
+        <h2>Search Result:</h2>
+        <ul class="song-list">
+            {% for song in songs %}
+                <li class="song-item">
+                    <div class="song-info">
+                        <strong>{{ song.name }}</strong> by {{ song.artists[0].name }}
+                    </div>
+                    <div class="song-link">
+                        <a href="{{ song.external_urls.spotify }}" target="_blank">Listen on Spotify</a>
+                    </div>
+                </li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>No song found matching the song name or artist name.</p>
+    {% endif %}
+{% endif %}
+
+{% if message %}
+    <p>{{ message }}</p>
+{% endif %}
+
+
+{% endblock %}
+

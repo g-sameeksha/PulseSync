@@ -1,0 +1,130 @@
+.breathing-container {
+    position: relative;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 90vh;
+
+}
+
+#breathing-container {
+    z-index:11;
+}
+
+.circle {
+    width: 100px;
+    height: 100px;
+    background: radial-gradient(circle, rgba(29, 185, 84, 1) 0%, rgba(0, 0, 0, 1) 60%, rgba(0, 0, 0, 0.8) 100%);
+    border-radius: 50%;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.8);
+    margin: 20px auto;
+   
+}
+
+/* Inhale Animation */
+@keyframes inhale {
+    0% {
+        transform: scale(2);
+        background-image: linear-gradient();
+    }
+  
+    100% {
+        transform: scale(4);
+    }
+}
+
+.inhale {
+    animation: inhale 4s ease-in-out;
+}
+
+/* Hold */
+.hold {
+    transform: scale(4);
+}
+
+/* Exhale Animation */
+@keyframes exhale {
+    0% {
+        transform: scale(4);
+    }
+   
+    100% {
+        transform: scale(2);
+    }
+}
+
+.exhale {
+    animation: exhale 8s ease-in-out;
+}
+
+.instructions {
+
+    width: 100%;
+    margin-top: 0;
+    margin-bottom: 205;
+    text-align: center;
+    color:white
+}
+
+#breathing-text {
+    font-size: 1.5em;
+    margin-top: 20px;
+    color: white;
+}
+
+.controls {
+    margin-top: 20px;
+}
+
+button {
+    padding: 10px 20px;
+    margin: 30px;
+    position: relative;
+    font-size: 1em;
+    background: linear-gradient(green,black);
+    color: white;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:disabled {
+    background: linear-gradient(rgb(239, 240, 239),black);
+    cursor: not-allowed;
+}
+
+button:hover:not(:disabled) {
+    background-color: #505050;
+}
+
+
+@media (max-width:760px) {
+    @keyframes inhale {
+        0% {
+            transform: scale(1);
+    
+        }
+      
+        100% {
+            transform: scale(2.5);
+        }
+    }
+
+    @keyframes exhale {
+        0% {
+            transform: scale(2.5);
+        }
+       
+        100% {
+            transform: scale(1);
+        }
+    }
+    
+    .hold {
+        transform: scale(2.5);
+    }
+    
+}

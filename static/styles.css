@@ -1,0 +1,363 @@
+/* General styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #1db954;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: background-color 3s ease-in-out;
+}
+
+.container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+nav {
+    background-color: black;
+    padding: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(10px);
+}
+
+.nav-list {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-list li {
+    margin: 0 15px;
+}
+
+.nav-list a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.nav-list a:hover {
+    color: #ffd700;
+}
+
+
+.hamburger {
+    display: none;
+}
+
+
+/* Search bar and results  */
+
+.search-bar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    z-index: -1000;
+}
+
+.search-bar input[type="text"] {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    width: 250px;
+    margin-right: 10px;
+    outline: none;
+    font-size: 16px;
+}
+
+.search-select {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    font-size: 16px;
+    margin-right: 10px;
+}
+
+.search-button {
+    padding: 10px 20px;
+    background-color: grey;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+  
+}
+
+.search-button:hover {
+    background-color: black;
+}
+
+.song-list {
+    list-style-type: none;
+    padding: 0;
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.song-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    padding: 15px;
+    margin-bottom: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(10px);
+    transition: background-color 0.3s ease;
+}
+
+.song-item:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.song-info {
+    color: white;
+    font-size: 18px;
+}
+
+.song-link a {
+    color: #ffd700;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.song-link a:hover {
+    text-decoration: underline;
+}
+
+/* Artist search*/
+.artist-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    color: white;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.artist-header {
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.artist-header h2 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.artist-header p {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.artist-songs-list {
+    list-style-type: none;
+    padding: 0;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.artist-song-item {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    padding: 15px;
+    margin: 10px;
+    box-shadow: 0 4px;
+    display: flex;
+    justify-content: space-evenly;
+    font-size: 20px;
+
+}
+.artist-song-item .song-name{
+    font-weight: 600;
+}
+
+
+/* Info cards */
+.info-card {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    color: white;
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+    transition: background-color 0.3s ease;
+
+}
+
+.info-card:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.info-card h2 {
+    margin-bottom: 20px;
+    font-size: 32px;
+}
+
+.info-card p {
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+
+.decreaseindex{
+   
+        position: relative;
+        z-index:-11;
+    
+}
+
+
+.contact-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 40px auto;
+}
+.contact a{
+    text-decoration: none;
+    color:white;
+    font-weight: bold;
+    padding: 10px;
+}
+.contact{
+  padding: 10px;
+  border: none;
+  border-radius: 10px;
+  box-shadow: black 1px 2px;
+  background-color: #105a2a;
+  cursor: pointer;
+}
+
+.contact:hover a{
+    color: #105a2a;
+}
+.contact:hover{
+    background-color: rgb(207, 207, 207);
+    box-shadow: #105a2a 1px 2px 2px 2px;
+
+}
+
+@media (max-width: 750px) {
+    .search-bar{
+        display: flex;
+        flex-direction: column;
+        gap :10px;
+    }
+    .search-button , .search-select , .search-bar , .search-bar input[type="text"]{
+        margin: 0;
+    }
+  
+    .nav-list {
+        display: none;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: #090909df;
+        position: fixed;
+        top: 60;
+        left: 0; 
+        height: 100vh; 
+        padding: 0 2rem;
+        transition: all 0.3s ease-in-out;
+        transform: translateX(100%);
+
+    }
+    .nav-list a{
+        color: white;
+        text-decoration: none;
+        font-size: 1.2rem;
+        padding: 0.8rem 0;
+        border-bottom: 1px solid #333; 
+        width: 100%;
+        text-align: center;
+        transition: background-color 0.3s;color: white; 
+       
+
+    }
+
+    .nav-list.active {
+        z-index:100;
+        display: flex;
+        gap: 1.5rem;
+        transform: translateX(0); 
+
+    }
+    
+    .hamburger {
+        display: block;
+        cursor: pointer;
+        font-size: 30px;
+        color: white;
+      
+      
+        z-index: 11; 
+    }
+    .info-card {
+        position: relative;
+        z-index: -11; 
+    }
+    .contact-container{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        margin:20px auto
+        
+    }
+    .contact{
+        margin:10px;
+        padding: 5px;
+    }
+    .contact a{
+        padding: 5px;
+    }
+
+   
+
+}
+
+
+
+/* Footer styles */
+footer {
+    background-color: black;
+    text-align: center;
+    padding: 10px;
+    box-shadow: 0 -4px 15px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(10px);
+}
+
+footer p {
+    margin: 0;
+    color: white;
+}
+
+footer a {
+    color: #ffd700;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+    color: #fdfdfd;
+}
